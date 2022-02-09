@@ -1,0 +1,21 @@
+{
+  "name": "mybulma",
+  "version": "1.0.0",
+  "main": "sass/main.scss",
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.7.2",
+    "node-sass": "^4.9.2"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url src/sass/main.scss src/css/style.css",
+    "css-watch": "npm run css-build -- --watch",
+    "serve": "PORT=4200 live-server src/index.html",
+    "start": "npm run serve & npm run css-watch"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "serve": "^13.0.2",
+    "webpack": "^5.68.0"
+  }
+}
